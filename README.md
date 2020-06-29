@@ -9,6 +9,7 @@
 ## General info
 
 This project is a Simple Calculator created with Create React App. Using only functional components and React Hooks. No state management libs added.
+Live demo at: http://calculator-react-silesia.herokuapp.com
 
 ## Technologies:
 
