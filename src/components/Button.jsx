@@ -3,6 +3,8 @@ import * as bcgrColor from "./buttonColors";
 
 import styled from "styled-components";
 
+// extending use of styled-components with props being passed from parent component
+// conditionally rendering size and colours, addtionally assigning colors stored in ./buttonColors.js
 const StyledButton = styled.button`
   height: 100%;
   width: 100%;
@@ -29,7 +31,6 @@ const StyledButton = styled.button`
 `;
 
 const Button = ({ double, children, color, handleClick, operator }) => {
-  console.log(1);
   return (
     <StyledButton
       double={double}

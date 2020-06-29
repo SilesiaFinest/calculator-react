@@ -5,6 +5,7 @@ import { evaluate } from "mathjs";
 
 import styled from "styled-components";
 
+// using styled-components for easy styling and to avoid any conflicts in class names
 const CalcWrapper = styled.div`
   width: 20vw;
   min-width: 260px;
@@ -28,9 +29,11 @@ const StyledRow = styled.div`
 `;
 
 const Calculator = () => {
+  // using useState Hooks for state management
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
 
+  // calculator functions below, isNan to avoid double operators
   const addToInput = (val) => {
     if (val === "x") {
       val = "*";
@@ -44,6 +47,7 @@ const Calculator = () => {
     }
   };
 
+  // negate the result button
   const changeSign = () => {
     if (result > 0) {
       setResult(Math.abs(result) * -1);
@@ -52,11 +56,13 @@ const Calculator = () => {
     }
   };
 
+  // clear button - cleares both states
   const clearInput = () => {
     setInput("");
     setResult("");
   };
 
+  // getResult
   const getResult = () => {
     if (isNaN(input[input.length - 1])) {
       setResult((prevState) => prevState);
@@ -65,6 +71,7 @@ const Calculator = () => {
     }
   };
 
+  // using Flexbox for simple and responsible design
   return (
     <div>
       <CalcWrapper>
